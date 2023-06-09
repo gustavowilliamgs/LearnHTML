@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    font-size: 20px;
+
+    --cor-principal: #FF6100;
+    --cor-secundaria: #222;
+    --cor-branco: #fff;
+    --cor-preto: #000;
+    --cor-verde: #0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*::selection {
+    color: var(--cor-preto);
+    background-color: var(--cor-verde);
+}
+
+*:not(header, nav) {
+    transition: 1;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-principal);
+}
+
+header nav {
+    position: fixed;
+    width: 100vw;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    z-index: 1;
+}
+
+header nav>ul {
+    margin-left: 325px;
+    display: flex;
+    gap: 100px;
+}
+
+header nav>ul li {
+    list-style-type: none;
+}
+
+header nav ul li ul {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    position: relative;
+}
+
+header nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-preto);
+    padding: 10px;
+}
+
+header nav ul li ul li a {
+    cursor: pointer;
+    color: var(--cor-branco);
+}
+
+header nav ul li ul li a span {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+header nav ul li span {
+    color: var(--cor-branco);
+    cursor: pointer;
+}
+
+header nav ul li a {
+    position: relative;
+    color: var(--cor-branco);
+    text-decoration: none;
+}
+
+header nav ul li a:after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--cor-verde);
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    top: 25px;
+    right: 0;
+}
+
+header nav ul li a:hover::after {
+    right: auto;
+    left: 0;
+    top: 25px;
+    width: 100%;
+}
+
+header div#logo {
+    float: left;
+    position: relative;
+    top: 50vh;
+    left: 15vw;
+    width: 500px;
+    height: 500px;
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+}
+
+header section {
+    position: absolute;
+    top: 50vh;
+    left: 57vw;
+    width: 30vw;
+    transform: translateY(-55%);
+}
+
+header section p {
+    text-align: justify;
+    color: var(--cor-branco);
+}
+
+button#btn-ver-curso {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--cor-secundaria);
+    background-color: transparent;
+    font-size: 1em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+button#btn-ver-curso:after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: var(--cor-verde);
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+button#btn-ver-curso:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+button#btn-ver-curso span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: var(--cor-branco);
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+button#btn-ver-curso:hover span {
+    color: var(--cor-preto);
+    animation: pular 0.3s ease-in-out;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    padding: 200px;
+}
+
+main section {
+    margin: 0 auto;
+    width: 70vw;
+}
+
+main section h1 {
+    margin: 0 auto;
+    font-size: 2em;
+    width: 90%;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+main section p {
+    text-align: justify;
+    margin-bottom: 0px;
+}
+
+button#btn-fazer-curso {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--cor-secundaria);
+    background-color: transparent;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 100px 0;
+}
+
+button#btn-fazer-curso:after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: var(--cor-verde);
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+button#btn-fazer-curso:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+button#btn-fazer-curso span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: var(--cor-preto);
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+button#btn-fazer-curso:hover span {
+    color: var(--cor-preto);
+    animation: pular 0.3s ease-in-out;
+}
+
+@keyframes pular {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 375px) {
+
+    :root {
+        font-size: 18px;
+    }
+
+    header nav>ul {
+        display: none;
+    }
+
+    header div#logo {
+        float: none;
+        width: 200px;
+        height: 200px;
+        background-image: url("img/logo200.png");
+        transform: translate(0);
+        position: relative;
+        top: 20px;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    header section {
+        position: absolute;
+        transform: translateY(0);
+        left: 50%;
+        top: 200px;
+        width: 65vw;
+        transform: translateX(-50%);
+    }
+
+    button#btn-ver-curso span,
+    button#btn-fazer-curso span {
+        padding: 8px 5px;
+        font-size: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main section {
+        width: 250px;
+    }
+
+    main section h1 {
+        margin: 0 auto;
+        font-size: 1.5em;
+        width: 90%;
+        margin-bottom: 80px;
+        text-align: left;
+    }
+}

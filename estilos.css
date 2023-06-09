@@ -3,8 +3,6 @@
 
 
 :root {
-    font-size: 20px;
-
     --cor-principal: #FF6100;
     --cor-secundaria: #222;
     --cor-branco: #fff;
@@ -19,13 +17,9 @@
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-*::selection {
+::selection {
     color: var(--cor-preto);
     background-color: var(--cor-verde);
-}
-
-*:not(header, nav) {
-    transition: 1;
 }
 
 html,
@@ -41,238 +35,347 @@ header {
     width: 100vw;
     height: 100vh;
     background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: justify;
 }
 
-header nav {
-    position: fixed;
-    width: 100vw;
-    padding: 20px;
-    background-color: var(--cor-secundaria);
-    z-index: 1;
-}
-
-header nav>ul {
-    margin-left: 325px;
-    display: flex;
-    gap: 100px;
-}
-
-header nav>ul li {
+li {
     list-style-type: none;
 }
 
-header nav ul li ul {
-    display: flex;
-    flex-direction: column;
-    display: none;
-    position: relative;
-}
-
-header nav ul li:hover ul {
-    display: block;
-    position: absolute;
-    background-color: var(--cor-secundaria);
-    border: 2px solid var(--cor-preto);
-    padding: 10px;
-}
-
-header nav ul li ul li a {
-    cursor: pointer;
+a {
     color: var(--cor-branco);
 }
 
-header nav ul li ul li a span {
-    display: inline-block;
-    width: 300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@media (min-width: 280px) {
+    header {
+        padding: 0 10vw;
+    }
+
+    header nav {
+        position: fixed;
+        width: 100vw;
+        padding: 20px;
+        background-color: var(--cor-secundaria);
+        transform: translateX(calc(-10% - 1px));
+        z-index: 1;
+    }
+
+    header nav div#menu {
+        float: right;
+        cursor: pointer;
+    }
+
+    header nav div#menu div.linha {
+        height: 1px;
+        width: 15px;
+        margin: 5px;
+        background-color: var(--cor-branco);
+    }
+
+    header nav>ul {
+        display: none;
+    }
+
+    header nav>ul.ativo {
+        position: absolute;
+        height: calc(100vh - 62px);
+        width: 100vw;
+        left: 0;
+        top: 62px;
+        background-color: var(--cor-secundaria);
+        padding: 20px;
+        display: block;
+    }
+
+    header nav>ul.ativo li {
+        margin-bottom: 10px;
+    }
+
+    header nav ul li ul {
+        display: flex;
+        flex-direction: column;
+        display: none;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    header nav ul li ul {
+        display: block;
+        position: absolute;
+        background-color: var(--cor-secundaria);
+        border: 2px solid var(--cor-preto);
+        padding: 10px;
+    }
+
+    header nav ul li ul li a {
+        cursor: pointer;
+        color: var(--cor-branco);
+    }
+
+    header nav ul li ul li a span {
+        display: inline-block;
+        width: calc(100vw - 75px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    header nav ul li a {
+        position: relative;
+        color: var(--cor-branco);
+        text-decoration: none;
+    }
+
+    header nav ul li a:after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: var(--cor-verde);
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        top: 20px;
+        right: 0;
+    }
+
+    header nav ul li a:hover::after {
+        right: auto;
+        left: 0;
+        top: 20px;
+        width: 100%;
+    }
+
+    header div#logo {
+        width: 200px;
+        height: 200px;
+        background-image: url("img/logo200.png");
+        margin: 0 auto;
+        position: relative;
+        top: 50px;
+    }
+
+    header section {
+        position: relative;
+        top: 20px;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    header button#btn-ver-curso {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 2px;
+        padding: 8px 12px;
+        box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+        border: 2px solid var(--cor-secundaria);
+        background-color: transparent;
+        font-size: 1em;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 85vh;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
+    header button#btn-ver-curso:after {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: var(--cor-verde);
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        right: 0;
+    }
+
+    header button#btn-ver-curso:hover::after {
+        right: auto;
+        left: 0;
+        width: 100%;
+    }
+
+    header button#btn-ver-curso span {
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        padding: 10px;
+        color: var(--cor-branco);
+        font-weight: 700;
+        z-index: 20;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button#btn-ver-curso:hover span {
+        color: var(--cor-preto);
+        animation: pular 0.3s ease-in-out;
+    }
+
+    main {
+        height: 100vh;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    main section {
+        margin: 0 auto;
+        max-width: 700px;
+        margin-bottom: 10vw;
+    }
+
+    main section h1 {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    main section p {
+        text-align: justify;
+    }
+
+    main button#btn-fazer-curso {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 10px;
+        border-radius: 2px;
+        box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+        border: 2px solid var(--cor-secundaria);
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10px;
+    }
+
+    main button#btn-fazer-curso:after {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: var(--cor-verde);
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        right: 0;
+    }
+
+    main button#btn-fazer-curso:hover::after {
+        right: auto;
+        left: 0;
+        width: 100%;
+    }
+
+    main button#btn-fazer-curso span {
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        padding: 8px 12px;
+        color: var(--cor-preto);
+        font-weight: 700;
+        z-index: 20;
+        transition: all 0.3s ease-in-out;
+    }
+
+    main button#btn-fazer-curso:hover span {
+        color: var(--cor-preto);
+        animation: pular 0.3s ease-in-out;
+    }
 }
 
-header nav ul li span {
-    color: var(--cor-branco);
-    cursor: pointer;
+@media (min-width: 480px) {
+    header div#logo {
+        background-image: url("img/logo300.png");
+        width: 300px;
+        height: 300px;
+    }
 }
 
-header nav ul li a {
-    position: relative;
-    color: var(--cor-branco);
-    text-decoration: none;
+@media (min-width: 900px) {
+    header nav div#menu {
+        display: none;
+    }
+
+    header div#logo {
+        float: left;
+        position: relative;
+        top: 50vh;
+        transform: translateY(-50%);
+    }
+
+    header section {
+        position: absolute;
+        top: 50vh;
+        left: 57vw;
+        width: 30vw;
+        transform: translateY(-55%);
+    }
+
+    header nav>ul {
+        margin-left: 10vw;
+        display: flex;
+        gap: 10vw;
+    }
+
+    header nav ul li ul {
+        margin: 0;
+        display: none;
+    }
+
+    header nav ul li ul li a span {
+        width: 300px;
+    }
+
+    header ul li span {
+        cursor: pointer;
+    }
+
+    header nav ul li:hover ul {
+        display: block;
+    }
+
+    main {
+        padding-top: 180px;
+    }
 }
 
-header nav ul li a:after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: var(--cor-verde);
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    top: 25px;
-    right: 0;
-}
+@media (min-width: 1400px) {
+    :root {
+        font-size: 20px;
+    }
 
-header nav ul li a:hover::after {
-    right: auto;
-    left: 0;
-    top: 25px;
-    width: 100%;
-}
+    header div#logo {
+        background-image: url("img/logo.png");
+        width: 500px;
+        height: 500px;
+    }
 
-header div#logo {
-    float: left;
-    position: relative;
-    top: 50vh;
-    left: 15vw;
-    width: 500px;
-    height: 500px;
-    background-image: url("img/logo.png");
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
-}
+    main section h1 {
+        margin-bottom: 150px !important;
+    }
 
-header section {
-    position: absolute;
-    top: 50vh;
-    left: 57vw;
-    width: 30vw;
-    transform: translateY(-55%);
-}
+    header button#btn-ver-curso,
+    main button#btn-fazer-curso {
+        padding: 10px 15px;
+    }
 
-header section p {
-    text-align: justify;
-    color: var(--cor-branco);
-}
+    main button#btn-fazer-curso {
+        padding: 20px 25px;
+    }
 
-button#btn-ver-curso {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    overflow: hidden;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    border: 5px solid var(--cor-secundaria);
-    background-color: transparent;
-    font-size: 1em;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 80vh;
-    left: 50vw;
-    transform: translateX(-50%);
-}
+    header button#btn-ver-curso span,
+    main button#btn-fazer-curso span {
+        font-weight: 700;
+        font-size: 1.125em;
+    }
 
-button#btn-ver-curso:after {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: var(--cor-verde);
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
-}
-
-button#btn-ver-curso:hover::after {
-    right: auto;
-    left: 0;
-    width: 100%;
-}
-
-button#btn-ver-curso span {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: 18px 25px;
-    color: var(--cor-branco);
-    font-size: 1.125em;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
-}
-
-button#btn-ver-curso:hover span {
-    color: var(--cor-preto);
-    animation: pular 0.3s ease-in-out;
-}
-
-main {
-    height: 100vh;
-    width: 100vw;
-    padding: 200px;
-}
-
-main section {
-    margin: 0 auto;
-    width: 900px;
-}
-
-main section h1 {
-    margin: 0 auto;
-    font-size: 2em;
-    width: 90%;
-    margin-bottom: 80px;
-    text-align: center;
-}
-
-main section p {
-    text-align: justify;
-    margin-bottom: 0px;
-}
-
-button#btn-fazer-curso {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    overflow: hidden;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    border: 5px solid var(--cor-secundaria);
-    background-color: transparent;
-    font-size: 1em;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 175vh;
-    left: 50vw;
-    transform: translateX(-50%);
-}
-
-button#btn-fazer-curso:after {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: var(--cor-verde);
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
-}
-
-button#btn-fazer-curso:hover::after {
-    right: auto;
-    left: 0;
-    width: 100%;
-}
-
-button#btn-fazer-curso span {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: 18px 25px;
-    color: var(--cor-preto);
-    font-size: 1.125em;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
-}
-
-button#btn-fazer-curso:hover span {
-    color: var(--cor-preto);
-    animation: pular 0.3s ease-in-out;
+    main button#btn-fazer-curso span {
+        font-size: 1.5em;
+    }
 }
 
 @keyframes pular {
