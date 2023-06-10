@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aula 2: Estrutura básica de uma página HTML</title>
+    <link rel="stylesheet" href="aulas.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <script src="../menu.js" defer></script>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div id="menu">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </div>
+            <ul id="submenu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><span>Aulas</span>
+                    <ul>
+                        <li><a href=""><span>Aula - 1: Introdução ao HTML</span></a></li>
+                        <li><a href=""><span>Aula - 2: Estrutura básica de uma página HTML</span></a></li>
+                        <li><a href=""><span>Aula - 3: Introdução ao HTML</span></a></li>
+                        <li><a href=""><span>Aula - 4: Formatação de texto</span></a></li>
+                        <li><a href=""><span>Aula - 5: Listas e tabelas</span></a></li>
+                        <li><a href=""><span>Aula - 6: Links e âncoras</span></a></li>
+                        <li><a href=""><span>Aula - 7: Imagens e multimídia</span></a></li>
+                        <li><a href=""><span>Aula - 8: Formulários e entrada de dados</span></a></li>
+                        <li><a href=""><span>Aula - 9: Divisões e spans</span></a></li>
+                        <li><a href=""><span>Aula - 10: Elementos semânticos HTML5</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Estrutura básica de uma página HTML</h1>
+            <p>Toda página HTML tem uma estrutura básica que inclui as seguintes seções:</p>
+
+            <ol type="1">
+                <li>
+                    <code class="doctype"><span>&lt;</span>!DOCTYPE html<span>&gt;</span></code>: Esta linha indica ao
+                    navegador que a
+                    página é
+                    escrita em HTML5.
+                </li>
+                <li>
+                    <code><span>&lt;</span>html<span>&gt;</span></code>: Esta tag marca o início do documento HTML.
+                </li>
+                <li>
+                    <code><span>&lt;</span>head<span>&gt;</span></code>: Esta seção contém informações sobre a página,
+                    como o título
+                    e os links
+                    para
+                    folhas de estilo e scripts.
+                </li>
+                <li>
+                    <code><span>&lt;</span>title<span>&gt;</span></code>: Dentro da seção
+                    <code><span>&lt;</span>head<span>&gt;</span></code>,
+                    esta tag define o título da
+                    página, que aparece na aba
+                    do navegador.
+                </li>
+                <li>
+                    <code><span>&lt;</span>body<span>&gt;</span></code>: Esta seção contém o conteúdo principal da
+                    página, como
+                    texto, imagens e
+                    links.
+                </li>
+                <li>
+                    <code><span>&lt;</span>/html<span>&gt;</span></code>: Esta tag marca o fim do documento HTML.
+                </li>
+            </ol>
+
+            <p>Aqui está um exemplo de uma página HTML simples:</p>
+
+            <iframe width="100%" height="350"
+                src="//jsfiddle.net/gustavowilliamgs/djvtpbaL/1/embedded/html,result/dark/"
+                allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0">
+            </iframe>
+
+            <p>
+                Nesta página, temos um título "Minha Página" e um conteúdo principal que consiste em um cabeçalho "Olá,
+                mundo!" e um parágrafo "Esta é minha primeira página HTML.".
+            </p>
+            <button class="navegar voltar"><a href="aula-1.html">Aula anterior</a></button>
+            <button class="navegar proximo"><a href="aula-3.html">Proxima aula</a></button>
+        </section>
+    </main>
 </body>
+
 </html>

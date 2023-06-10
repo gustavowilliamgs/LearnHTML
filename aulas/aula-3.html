@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aula 3: Tags e elementos HTML</title>
+    <link rel="stylesheet" href="aulas.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <script src="../menu.js" defer></script>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div id="menu">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </div>
+            <ul id="submenu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><span>Aulas</span>
+                    <ul>
+                        <li><a href=""><span>Aula - 1: Introdução ao HTML</span></a></li>
+                        <li><a href=""><span>Aula - 2: Estrutura básica de uma página HTML</span></a></li>
+                        <li><a href=""><span>Aula - 3: Introdução ao HTML</span></a></li>
+                        <li><a href=""><span>Aula - 4: Formatação de texto</span></a></li>
+                        <li><a href=""><span>Aula - 5: Listas e tabelas</span></a></li>
+                        <li><a href=""><span>Aula - 6: Links e âncoras</span></a></li>
+                        <li><a href=""><span>Aula - 7: Imagens e multimídia</span></a></li>
+                        <li><a href=""><span>Aula - 8: Formulários e entrada de dados</span></a></li>
+                        <li><a href=""><span>Aula - 9: Divisões e spans</span></a></li>
+                        <li><a href=""><span>Aula - 10: Elementos semânticos HTML5</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Tags e elementos HTML</h1>
+            <p>
+                Como mencionado anteriormente, HTML é composto por tags e elementos. As tags são usadas para marcar o
+                início e o fim de um elemento. Por exemplo, a tag <code><span>&lt;</span>p<span>&gt;</span></code> marca
+                o início de um parágrafo e a tag <code><span>&lt;/</span>p<span>&gt;</span></code> marca o fim do
+                parágrafo.
+            </p>
+            <p>
+                Existem muitas tags diferentes em HTML, cada uma com um propósito específico. Algumas das tags mais
+                comuns incluem:
+            </p>
+            <ul>
+                <li>
+                    <code><span>&lt;</span>h1<span>&gt;</span></code> a
+                    <code><span>&lt;</span>h6<span>&gt;</span></code>: Estas tags são usadas para criar cabeçalhos de
+                    diferentes tamanhos. <code><span>&lt;</span>h1<span>&gt;</span></code> é o maior e
+                    <code><span>&lt;</span>h6<span>&gt;</span></code> é o menor.
+                </li>
+                <li>
+                    <code><span>&lt;</span>p<span>&gt;</span></code>: Esta tag é usada para criar parágrafos.
+                </li>
+                <li>
+                    <code><span>&lt;</span>a<span>&gt;</span></code>: Esta tag é usada para criar links.
+                </li>
+                <li>
+                    <code><span>&lt;</span>img<span>&gt;</span></code>: Esta tag é usada para inserir imagens na página.
+                </li>
+                <li>
+                    <code><span>&lt;</span>ul<span>&gt;</span></code> e
+                    <code><span>&lt;</span>ol<span>&gt;</span></code>: Estas tags são usadas para criar listas não
+                    ordenadas e ordenadas, respectivamente.
+                </li>
+                <li>
+                    <code><span>&lt;</span>li<span>&gt;</span></code>: Esta tag é usada para criar itens de lista dentro
+                    de uma lista não ordenada ou ordenada.
+                </li>
+            </ul>
+            <p>Aqui está um exemplo de como essas tags podem ser usadas em uma página HTML:</p>
+            <script async src="//jsfiddle.net/gustavowilliamgs/6kwnac5q/1/embed/html,result/dark/"></script>
+            <p>
+                Nesta página, temos vários cabeçalhos, uma lista não ordenada de
+                educação e uma lista ordenada de experiência profissional.
+            </p>
+            <button class="navegar voltar"><a href="aula-2.html">Aula anterior</a></button>
+            <button class="navegar proximo"><a href="aula-4.html">Proxima aula</a></button>
+        </section>
+    </main>
 </body>
+
 </html>

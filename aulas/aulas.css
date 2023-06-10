@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    height: auto !important;
+    background-color: transparent !important;
+}
+
+main {
+    padding-top: 50px !important;
+}
+
+main section ul,
+main section ol {
+    padding-left: 50px;
+    margin-bottom: 50px;
+}
+
+iframe {
+    margin-bottom: 50px;
+}
+
+code {
+    background-color: #20262e;
+    font-family: monospace !important;
+    color: #FF4F68;
+    padding: 2px;
+}
+
+code span {
+    color: white;
+}
+
+code.doctype,
+code.doctype span {
+    color: #C68FE8;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--cor-secundaria);
+    background-color: var(--cor-verde);
+    font-size: 1em;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+button.navegar a {
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--cor-preto);
+}
+
+button.navegar.voltar {
+    float: left;
+    margin-left: 120px;
+}
+
+button.navegar.voltar:hover {
+    background-color: rgba(0, 255, 0, 0.724);
+}
+
+button.navegar.proximo {
+    float: right;
+    margin-right: 120px;
+}
+
+button.navegar.proximo:hover {
+    background-color: rgba(0, 255, 0, 0.724);
+}
+
+@media (max-width: 900px) {
+    main {
+        padding-top: 80px !important;
+    }
+}

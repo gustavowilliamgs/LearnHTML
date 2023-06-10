@@ -1,11 +1,10 @@
 const btnVerCursoEl = document.querySelector('#btn-ver-curso');
-const menuEl = document.querySelector('#menu');
-const submenuEl = document.querySelector('#submenu');
+const btnFazerCursoEl = document.querySelector('#btn-fazer-curso');
 
 btnVerCursoEl.addEventListener('click', () => {
     window.location.href = '#btn-fazer-curso';
 });
 
-menuEl.addEventListener('click', () => {
-    submenuEl.classList.toggle('ativo');
+btnFazerCursoEl.addEventListener('click', () => {
+    window.location.href = './aulas/aula-1.html';
 });
