@@ -62,8 +62,9 @@ button.navegar a {
 }
 
 button.navegar.voltar {
-    float: left;
-    margin-left: 120px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-100%);
 }
 
 button.navegar.voltar:hover {
@@ -71,8 +72,9 @@ button.navegar.voltar:hover {
 }
 
 button.navegar.proximo {
-    float: right;
-    margin-right: 120px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-100%);
 }
 
 button.navegar.proximo:hover {
@@ -82,5 +84,22 @@ button.navegar.proximo:hover {
 @media (max-width: 900px) {
     main {
         padding-top: 80px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    button.navegar.voltar {
+        display: block;
+        margin: 0 auto;
+        position: static;
+        transform: translateX(0);
+        margin-bottom: 20px;
+    }
+
+    button.navegar.proximo {
+        display: block;
+        margin: 0 auto;
+        position: static;
+        transform: translateX(0);
     }
 }

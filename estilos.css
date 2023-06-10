@@ -63,7 +63,7 @@ a {
         width: 100vw;
         padding: 20px;
         background-color: var(--cor-secundaria);
-        transform: translateX(calc(-10% - 1px));
+        transform: translateX(calc(-10%));
         z-index: 1;
     }
 
@@ -295,7 +295,7 @@ a {
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 400px) {
     header div#logo {
         background-image: url("img/logo300.png");
         width: 300px;
@@ -309,6 +309,9 @@ a {
     }
 
     header div#logo {
+        background-image: url("img/logo400.png");
+        width: 400px;
+        height: 400px;
         float: left;
         position: relative;
         top: 50vh;
@@ -372,17 +375,13 @@ a {
     }
 
     main button#btn-fazer-curso {
-        padding: 20px 25px;
+        padding: 10px 15px;
     }
 
     header button#btn-ver-curso span,
     main button#btn-fazer-curso span {
         font-weight: 700;
         font-size: 1.125em;
-    }
-
-    main button#btn-fazer-curso span {
-        font-size: 1.5em;
     }
 }
 
