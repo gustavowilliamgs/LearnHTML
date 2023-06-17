@@ -49,7 +49,7 @@ code.doctype span {
     color: #C68FE8;
 }
 
-button {
+button.navegar {
     border: none;
     outline: none;
     cursor: pointer;
@@ -76,7 +76,7 @@ button.navegar.voltar {
     transform: translateX(-100%);
 }
 
-button.navegar.voltar:hover {
+button.navegar:hover {
     background-color: rgba(0, 255, 0, 0.724);
 }
 
@@ -84,10 +84,6 @@ button.navegar.proximo {
     position: relative;
     left: 50%;
     transform: translateX(-100%);
-}
-
-button.navegar.proximo:hover {
-    background-color: rgba(0, 255, 0, 0.724);
 }
 
 @media (max-width: 900px) {
