@@ -154,7 +154,7 @@ a {
     header div#logo {
         width: 200px;
         height: 200px;
-        background-image: url("img/logo200.png");
+        background-image: url("../img/logo200.png");
         margin: 0 auto;
         position: relative;
         top: 50px;
@@ -296,7 +296,7 @@ a {
 
 @media (min-width: 400px) {
     header div#logo {
-        background-image: url("img/logo300.png");
+        background-image: url("../img/logo300.png");
         width: 300px;
         height: 300px;
     }
@@ -308,7 +308,7 @@ a {
     }
 
     header div#logo {
-        background-image: url("img/logo400.png");
+        background-image: url("../img/logo400.png");
         width: 400px;
         height: 400px;
         float: left;
@@ -359,7 +359,7 @@ a {
     }
 
     header div#logo {
-        background-image: url("img/logo.png");
+        background-image: url("../img/logo.png");
         width: 500px;
         height: 500px;
     }
@@ -405,7 +405,7 @@ a {
         }
 
         header div#logo {
-            background-image: url("img/logo.png");
+            background-image: url("../img/logo.png");
             width: 500px;
             height: 500px;
         }

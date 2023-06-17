@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 6: Links e âncoras</title>
-    <link rel="stylesheet" href="aulas.css">
-    <link rel="stylesheet" href="../estilos.css">
-    <script src="../menu.js" defer></script>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/aulas.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/menu.js" defer></script>
 </head>
 
 <body>
@@ -45,7 +46,37 @@
     <main>
         <section>
             <h1>Links e âncoras</h1>
-            <p></p>
+            <p>
+                Em HTML, você pode usar a tag <code><span>&lt;</span>a<span>&gt;</span></code> para criar links. Esta
+                tag tem um atributo <code><span class="atributo">href</span></code> que especifica o destino do link.
+                Por exemplo:
+            </p>
+            <p>
+                <code><span>&lt;</span>a <span class="atributo">href</span><span>=</span><span class="aspas">"https://www.example.com"</span><span>&gt;</span><span>Visite nosso site&lt;/</span><span>&gt;</span></code>
+            </p>
+            <p>Neste exemplo, criamos um link para o site
+                <code><span class="aspas">"https://www.example.com"</span></code>com o
+                texto "Visite nosso site".</p>
+            <p>
+                Você também pode usar a tag <code><span>&lt;</span>a<span>&gt;</span></code> para criar âncoras dentro
+                de
+                uma página. Para fazer isso, você precisa
+                adicionar um atributo <code><span class="atributo">id</span></code> a um elemento na página e, em
+                seguida, usar o
+                valor desse atributo como o
+                destino do link. Por exemplo:
+            </p>
+            <iframe width="100%" height="400"
+                src="//jsfiddle.net/gustavowilliamgs/yLq1xgfz/15/embedded/html,result/dark/"
+                allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <p>
+                Neste exemplo, criamos duas âncoras com os ids "section1" e "section2". Em seguida, criamos dois links
+                que apontam para essas âncoras usando os valores dos atributos
+                <code><span class="atributo">href</span></code> como
+                <code><span class="aspas">"#section1"</span></code> e
+                <code><span class="aspas">"#section2"</code></span>,
+                respectivamente.
+            </p>
             <button class="navegar voltar"><a href="aula-5.html">Aula anterior</a></button>
             <button class="navegar proximo"><a href="aula-7.html">Proxima aula</a></button>
         </section>

@@ -33,6 +33,15 @@ code {
 
 code span {
     color: white;
+    font-family: monospace !important;
+}
+
+code span.atributo {
+    color: #F8B068;
+}
+
+code span.aspas {
+    color: #f5eea2;
 }
 
 code.doctype,
