@@ -54,7 +54,7 @@ a {
     color: var(--cor-branco);
 }
 
-@media (min-width: 280px) {
+@media (min-width: 0px) {
     header {
         padding: 0 10vw;
     }
@@ -74,10 +74,25 @@ a {
     }
 
     header nav div#menu div.linha {
-        height: 2px;
+        height: 3px;
         width: 30px;
-        margin: 10px;
+        margin: 7px 0;
         background-color: var(--cor-branco);
+        transition: .8s;
+    }
+
+    header nav div#menu.ativo #linha-2 {
+        opacity: 0;
+    }
+
+    header nav div#menu.ativo #linha-1 {
+        transform: rotateZ(45deg);
+        transform-origin: left top;
+    }
+
+    header nav div#menu.ativo #linha-3 {
+        transform: rotateZ(-45deg);
+        transform-origin: left bottom;
     }
 
     header nav>ul {
