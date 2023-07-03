@@ -54,20 +54,21 @@ button.navegar {
     outline: none;
     cursor: pointer;
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 2px;
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--cor-secundaria);
     background-color: var(--cor-verde);
     font-size: 1em;
     margin-bottom: 10px;
-    width: 150px;
+    width: 165px;
 }
 
 button.navegar a {
     font-size: 1em;
     text-decoration: none;
     color: var(--cor-preto);
+    padding: 15px 30px;
 }
 
 button.navegar.voltar {
@@ -97,7 +98,7 @@ button.navegar.inicio {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 375px) {
     button.navegar.voltar {
         display: block;
         margin: 0 auto;
