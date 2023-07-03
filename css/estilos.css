@@ -329,10 +329,51 @@ a {
     header nav>ul {
         position: static;
         left: 0;
+        padding: 0;
         height: auto;
     }
+
+    header nav ul li ul {
+        background-color: var(--cor-secundaria);
+        position: absolute;
+    }
+
     header nav div#menu {
         display: none;
+    }
+
+    header nav>ul {
+        margin-left: 10vw;
+        display: flex;
+        gap: 10vw;
+    }
+
+    header nav ul li:hover ul {
+        display: block;
+    }
+
+    header ul li span {
+        cursor: pointer;
+    }
+
+    header nav ul li ul {
+        margin: 0;
+        display: none;
+    }
+
+    header nav ul li ul li a span {
+        width: 300px;
+    }
+
+    header>nav>ul>li:after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: var(--cor-verde);
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        top: 20px;
+        right: 0;
     }
 
     header div#logo {
@@ -351,29 +392,6 @@ a {
         left: 57vw;
         width: 30vw;
         transform: translateY(-55%);
-    }
-
-    header nav>ul {
-        margin-left: 10vw;
-        display: flex;
-        gap: 10vw;
-    }
-
-    header nav ul li ul {
-        margin: 0;
-        display: none;
-    }
-
-    header nav ul li ul li a span {
-        width: 300px;
-    }
-
-    header ul li span {
-        cursor: pointer;
-    }
-
-    header nav ul li:hover ul {
-        display: block;
     }
 
     main {
