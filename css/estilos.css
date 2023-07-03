@@ -127,6 +127,10 @@ header nav ul li ul li a span {
     text-overflow: ellipsis;
 }
 
+header>nav>ul>li>a {
+    position: relative;
+}
+
 header>nav>ul>li>a:after {
     content: "";
     width: 0%;
@@ -134,8 +138,15 @@ header>nav>ul>li>a:after {
     background: var(--cor-verde);
     position: absolute;
     transition: all 0.4s ease-in-out;
-    top: 20px;
+    top: 15px;
     right: 0;
+}
+
+header nav ul li a:hover::after {
+    right: auto;
+    left: 0;
+    top: 15px;
+    width: 100%;
 }
 
 nav ul li ul li {
@@ -147,13 +158,6 @@ nav ul li ul li {
 
 nav ul li ul li:hover {
     background-color: rgba(0, 0, 0, 0.512);
-}
-
-header nav ul li a:hover::after {
-    right: auto;
-    left: 0;
-    top: 20px;
-    width: 100%;
 }
 
 header div#logo {
@@ -333,6 +337,10 @@ a {
         height: auto;
     }
 
+    header>nav>ul>li>a:after, header nav ul li a:hover::after {
+        top: 22px;
+    }
+
     header nav ul li ul {
         background-color: var(--cor-secundaria);
         position: absolute;
@@ -363,17 +371,6 @@ a {
 
     header nav ul li ul li a span {
         width: 300px;
-    }
-
-    header>nav>ul>li:after {
-        content: "";
-        width: 0%;
-        height: 2px;
-        background: var(--cor-verde);
-        position: absolute;
-        transition: all 0.4s ease-in-out;
-        top: 20px;
-        right: 0;
     }
 
     header div#logo {
