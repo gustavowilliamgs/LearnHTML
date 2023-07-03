@@ -330,6 +330,9 @@ a {
 }
 
 @media (min-width: 900px) {
+    header nav {
+        padding: 30px;
+    }
     header nav>ul {
         position: static;
         left: 0;
@@ -337,13 +340,17 @@ a {
         height: auto;
     }
 
-    header>nav>ul>li>a:after, header nav ul li a:hover::after {
-        top: 22px;
+    header nav>ul li {
+        margin-bottom: 0;
     }
 
     header nav ul li ul {
         background-color: var(--cor-secundaria);
         position: absolute;
+    }
+
+    header>nav>ul>li>a:after, header nav ul li a:hover::after {
+        top: 22px;
     }
 
     header nav div#menu {
@@ -355,7 +362,7 @@ a {
         display: flex;
         gap: 10vw;
     }
-
+    
     header nav ul li:hover ul {
         display: block;
     }
