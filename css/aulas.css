@@ -11,7 +11,7 @@ header {
 }
 
 main {
-    padding-top: 50px !important;
+    padding-top: 80px !important;
 }
 
 main section ul,
@@ -61,7 +61,7 @@ button.navegar {
     background-color: var(--cor-verde);
     font-size: 1em;
     margin-bottom: 10px;
-    width: 165px;
+    width: 185px;
 }
 
 button.navegar a {
