@@ -415,7 +415,7 @@ a {
     }
 
     main section h1 {
-        margin-bottom: 150px !important;
+        margin: 120px 0;
     }
 
     header button#btn-ver-curso,

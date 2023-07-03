@@ -14,6 +14,10 @@ main {
     padding-top: 100px !important;
 }
 
+main h1 {
+    margin-bottom: 60px !important;
+}
+
 main section ul,
 main section ol {
     padding-left: 50px;
