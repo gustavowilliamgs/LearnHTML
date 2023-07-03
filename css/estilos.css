@@ -326,6 +326,11 @@ a {
 }
 
 @media (min-width: 900px) {
+    header nav>ul {
+        position: static;
+        left: 0;
+        height: auto;
+    }
     header nav div#menu {
         display: none;
     }
