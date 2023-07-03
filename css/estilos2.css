@@ -407,12 +407,6 @@ a {
     }
 }
 
-button.navegar a {
-    font-size: 1em;
-    text-decoration: none;
-    color: var(--cor-preto);
-}
-
 @media (min-width: 720px) and (min-height: 1400px) {
     :root {
         font-size: 30px;
