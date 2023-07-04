@@ -5,12 +5,12 @@ const tituloEl = document.title;
 
 window.addEventListener('blur', () => {
     document.title = "LearnCSS";
-    iconEl.href = "./img/favicon-css.ico";
+    iconEl.href = "../img/favicon-css.ico";
 });
 
 window.addEventListener('focus', () => {
     document.title = tituloEl;
-    iconEl.href = "./img/favicon.ico";
+    iconEl.href = "../img/favicon.ico";
 });
 
 

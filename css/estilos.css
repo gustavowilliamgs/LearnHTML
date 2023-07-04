@@ -351,6 +351,13 @@ a {
         position: absolute;
     }
 
+    header nav>ul {
+        position: static;
+        left: 0;
+        padding: 0;
+        height: auto;
+    }
+
     header>nav>ul>li>a:after, header nav ul li a:hover::after {
         top: 22px;
     }
@@ -446,10 +453,6 @@ a {
 }
 
 @media (min-width: 720px) and (min-height: 1400px) {
-    :root {
-        font-size: 30px;
-    }
-
     header div#logo {
         background-image: url("../img/logo.png");
         width: 500px;

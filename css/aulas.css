@@ -15,6 +15,7 @@ main {
 }
 
 main h1 {
+    margin-top: 60px !important;
     margin-bottom: 60px !important;
 }
 
@@ -102,7 +103,7 @@ button.navegar.inicio {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 418px) {
     button.navegar.voltar {
         display: block;
         margin: 0 auto;
